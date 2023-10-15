@@ -1,32 +1,31 @@
+import classes from "./styles.module.scss";
+
+import { CardMultipleSlotProps } from "src/04_entities/card-multiple-slot-props";
 
 
 
 
 
-
-function Card({header, content, footer}) {
-
-  return (
-    <div>
-      {header}
-      {content}
-      {footer}
-    </div>
-  )
-}
 
 
 function SlotsPage() {
 
   return (
-    <>
-      hi
-      <Card
-        header={<h1>title</h1>}
-        content={<p>Content</p>}
-        footer={<a href="#">Read more</a>}
-      />
-    </>
+    <div className={classes["slots-page"]}>
+      <div className="container">
+        <div className={classes["slots-page__body"]}>
+          <CardMultipleSlotProps
+            header={<h1>title</h1>}
+            content={<p>Content</p>}
+            footer={<a href="#">Read more</a>}
+          >
+            <p>children component</p>
+          </CardMultipleSlotProps>
+
+          
+        </div>
+      </div>
+    </div >
   )
 }
 

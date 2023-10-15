@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-philippine-gray);
+  background-color: var(--color-eerie-black);
+}
+
+
+.container,
+.container-sm {
+  //width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@include media-breakpoint-up($md) {
+  .container,
+  .container-sm {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@include media-breakpoint-up($xxl) {
+  .container {
+    max-width: 1376px;
+  }
+  .container-sm {
+    max-width: 1156px;
+  }
+}
+
+
+
