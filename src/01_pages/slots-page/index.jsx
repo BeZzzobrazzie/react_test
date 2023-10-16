@@ -5,17 +5,28 @@ import { CardMultipleSlotProps } from "src/04_entities/card-multiple-slot-props"
 
 
 
+function Header({placeholder}) {
+
+  return (
+    <header>
+      hello
+      <input type="text" placeholder={placeholder} value={'hi'} />
+    </header>
+  )
+}
 
 
 
 function SlotsPage() {
+
+  const header = <Header placeholder={'hop-hei'} />;
 
   return (
     <div className={classes["slots-page"]}>
       <div className="container">
         <div className={classes["slots-page__body"]}>
           <CardMultipleSlotProps
-            header={<h1>title</h1>}
+            header={header}
             content={<p>Content</p>}
             footer={<a href="#">Read more</a>}
           >
